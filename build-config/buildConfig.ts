@@ -1,6 +1,7 @@
+import { buildLoaders } from "./buildLoaders";
 import { buildPlugins } from "./buildPlugins";
+import { buildResolves } from "./buildResolves";
 import { BuildOptions } from "./types";
-import path from "path";
 
 export function buildConfig(options: BuildOptions) {
   const { mode, path } = options;
@@ -14,17 +15,9 @@ export function buildConfig(options: BuildOptions) {
       clean: true,
     },
     module: {
-      rules: [
-        {
-          test: /\.tsx?$/,
-          use: "ts-loader",
-          exclude: /node_modules/,
-        },
-      ],
+      rules: buildLoaders(),
     },
-    resolve: {
-      extensions: [".tsx", ".ts", ".js"],
-    },
+    resolve: buildResolves(),
     plugins: buildPlugins(path.html),
   };
 }
