@@ -6,7 +6,14 @@ export type PathTypes = {
   html: string;
 };
 
+export type EnvTypes = {
+  mode: ModeType;
+  port?: number;
+};
+
 export interface BuildOptions {
   mode: ModeType;
   path: PathTypes;
+  port: number;
+  isDev: boolean;
 }
