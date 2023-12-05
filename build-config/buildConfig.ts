@@ -18,11 +18,16 @@ export function buildConfig(options: BuildOptions): Configuration {
       clean: true,
     },
     module: {
-      rules: buildLoaders(),
+      rules: buildLoaders(options),
     },
     devtool: isDev ? "inline-source-map" : undefined,
     resolve: buildResolves(),
     plugins: buildPlugins(path.html),
     devServer: isDev ? devServer(port) : undefined,
+    performance: {
+      hints: false,
+      maxEntrypointSize: 512000,
+      maxAssetSize: 512000,
+    },
   };
 }
