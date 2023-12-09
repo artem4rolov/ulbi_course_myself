@@ -2,13 +2,19 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "noImplicitAny": true,
-    "module": "CommonJS",
-    "target": "ESNext",
+    "module": "ESNext",
+    "target": "ES5",
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
     "importHelpers": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
+    // "baseUrl": ""
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
   }
 }
