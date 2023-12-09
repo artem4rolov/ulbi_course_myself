@@ -14,6 +14,7 @@ export default (env: EnvTypes) => {
       entry: path.resolve(__dirname, "src", "index.tsx"),
       output: path.resolve(__dirname, "dist"),
       html: path.resolve(__dirname, "public", "index.html"),
+      src: path.resolve(__dirname, "src"),
     },
     port,
     isDev,

@@ -21,7 +21,7 @@ export function buildConfig(options: BuildOptions): Configuration {
       rules: buildLoaders(options),
     },
     devtool: isDev ? "inline-source-map" : undefined,
-    resolve: buildResolves(),
+    resolve: buildResolves(options),
     plugins: buildPlugins(path.html),
     devServer: isDev ? devServer(port) : undefined,
     performance: {

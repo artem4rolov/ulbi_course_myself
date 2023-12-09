@@ -1,5 +1,5 @@
 import { RouteProps } from "react-router";
-import { AboutPage, ContactUs, Main } from "../../pages";
+import { AboutPage, ContactUs, Main } from "pages";
 
 enum PageNames {
   MAIN = "main",

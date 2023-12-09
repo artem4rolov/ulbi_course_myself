@@ -1,12 +1,10 @@
-import { Route, Routes } from "react-router";
-import { Link } from "react-router-dom";
 import { Suspense, useContext } from "react";
+import { Router } from "./router/router";
+import { classNames } from "shared";
+import { TestAsync } from "components";
+import { ThemeContext } from "./context/theme-context";
 
 import "./styles/index.scss";
-import { classNames } from "../utils";
-import { TestAsync } from "../components";
-import { ThemeContext } from "./context/theme-context";
-import { routerConfig } from "../config/router-config/router-config";
 
 export const App = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -17,14 +15,7 @@ export const App = () => {
         theme,
       ])}
     >
-      <Link to="/contact-us" children={<>Контакты</>} />
-      <Link to="/about-page" children={<>О нас</>} />
-      <Link to="/" children={<>На главную</>} />
-      <Routes>
-        {Object.values(routerConfig).map((config) => (
-          <Route path={config.path} element={config.element} />
-        ))}
-      </Routes>
+      <Router />
       <Suspense fallback="loading...">
         <TestAsync />
       </Suspense>
