@@ -1,0 +1,10 @@
+.navpanel {
+  height: var(--navpanel-height);
+  width: 100%;
+  padding: 20px 20px;
+
+  display: flex;
+  justify-content: space-between;
+
+  background: var(--inverted-bg-color);
+}
