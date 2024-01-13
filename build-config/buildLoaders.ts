@@ -1,6 +1,6 @@
-import { RuleSetRule } from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { BuildOptions } from "./types";
+import { RuleSetRule } from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { BuildOptions } from './types';
 
 export function buildLoaders(options: BuildOptions): RuleSetRule[] {
   const stylesLoader = {
@@ -11,28 +11,44 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
       MiniCssExtractPlugin.loader,
       // Translates CSS into CommonJS
       {
-        loader: "css-loader",
+        loader: 'css-loader',
         options: {
           modules: {
-            mode: "local",
+            mode: 'local',
             auto: (resourcePath: string) =>
-              Boolean(resourcePath.includes(".module.")),
+              Boolean(resourcePath.includes('.module.')),
             localIdentName: options.isDev
-              ? "[name]--[hash:base64:5]"
-              : "[hash:base64:8]",
+              ? '[name]--[hash:base64:5]'
+              : '[hash:base64:8]',
           },
         },
       },
       // Compiles Sass to CSS
-      "sass-loader",
+      'sass-loader',
     ],
   };
 
   const typeScriptLoader = {
     test: /\.tsx?$/,
-    use: "ts-loader",
+    use: 'ts-loader',
     exclude: /node_modules/,
   };
 
-  return [stylesLoader, typeScriptLoader];
+  const svgLoader = {
+    test: /\.svg$/,
+    use: {
+      loader: '@svgr/webpack',
+      options: {
+        prettier: false,
+        svgo: false,
+        svgoConfig: {
+          plugins: [{ removeViewBox: false }],
+        },
+        titleProp: true,
+        ref: true,
+      },
+    },
+  };
+
+  return [stylesLoader, typeScriptLoader, svgLoader];
 }
