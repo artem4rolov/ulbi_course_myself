@@ -3,7 +3,7 @@ import { SideBarProps } from '../lib/sidebar.types';
 import { ThemeContext } from 'app';
 
 import styles from './sidebar.module.scss';
-import { classNames } from 'shared';
+import { Button, classNames } from 'shared';
 
 export const SideBar: FC<SideBarProps> = () => {
   const { toggleTheme } = useContext(ThemeContext);
@@ -16,10 +16,12 @@ export const SideBar: FC<SideBarProps> = () => {
         open && styles['sidebar-opened'],
       ])}
     >
-      <button onClick={toggleTheme}>toggle</button>
-      <button onClick={() => setOpen((prev) => !prev)}>
+      <Button variant="outline-inverted" onClick={toggleTheme}>
+        toggle
+      </Button>
+      <Button variant="solid" onClick={() => setOpen((prev) => !prev)}>
         {open ? 'close' : 'open'}
-      </button>
+      </Button>
     </div>
   );
 };

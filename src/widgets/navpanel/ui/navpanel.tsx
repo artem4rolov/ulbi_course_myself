@@ -16,7 +16,7 @@ export const NavPanel: FC<NavPanelProps> = () => {
           />
         </Link>
       </div>
-      <div>
+      <div className={styles.navlinks}>
         <Router />
       </div>
     </div>

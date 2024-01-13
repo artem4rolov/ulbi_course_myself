@@ -1,0 +1,100 @@
+.button {
+  border: none;
+  background: transparent;
+  font-size: var(--font-size-m);
+  max-width: 200px;
+
+  cursor: pointer;
+}
+
+// ссылка
+.link {
+  color: var(--link-color);
+  transition: color 0.15s ease-in-out;
+
+  &:hover {
+    color: var(--hovered-link-color);
+  }
+}
+// ссылка инвертированный
+.link-inverted {
+  color: var(--link-inverted-color);
+  transition: color 0.15s ease-in-out;
+
+  &:hover {
+    color: var(--hovered-inverted-link-color);
+  }
+}
+
+// закрашенный
+.solid {
+  color: var(--button-font-color);
+  background: var(--button-background);
+  transition: background 0.15s ease-in-out;
+
+  padding: 5px 10px;
+  border-radius: 8px;
+
+  &:hover {
+    background: var(--button-hovered-background);
+  }
+}
+
+// только border
+.outline {
+  color: var(--button-font-color);
+  border: 1px solid var(--button-border-color);
+  transition: color, border, background 0.15s ease-in-out;
+
+  padding: 5px 10px;
+  border-radius: 8px;
+
+  &:hover {
+    color: var(--button-hovered-font-color);
+    border: 1px solid var(--button-hovered-border-color);
+    background: var(--button-hovered-background);
+  }
+}
+
+// только border инвертированный
+.outline-inverted {
+  color: var(--button-inverted-font-color);
+  border: 1px solid var(--button-inverted-border-color);
+  transition: color, border, background 0.15s ease-in-out;
+
+  padding: 5px 10px;
+  border-radius: 8px;
+
+  &:hover {
+    color: var(--button-inverted-hovered-font-color);
+    border: 1px solid var(--button-inverted-hovered-border-color);
+    background: var(--button-inverted-hovered-background);
+  }
+}
+
+//
+.ghost {
+  color: var(--button-font-color);
+  background: transparent;
+  transition: color, background 0.15s ease-in-out;
+
+  padding: 5px 10px;
+  border-radius: 8px;
+
+  &:hover {
+    background: #b0b2bb;
+  }
+}
+
+.ghost-inverted {
+  color: var(--button-inverted-font-color);
+  background: transparent;
+  transition: color, background 0.15s ease-in-out;
+
+  padding: 5px 10px;
+  border-radius: 8px;
+
+  &:hover {
+    background: #b0b2bb;
+  }
+}
