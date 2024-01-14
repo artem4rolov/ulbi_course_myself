@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, Suspense } from 'react';
 
 import { classNames } from 'shared';
 import { ThemeContext } from './context';
@@ -10,16 +10,20 @@ export const App = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div
-      className={classNames('app', { hovered: true, red: false, green: true }, [
-        theme,
-      ])}
-    >
-      <NavPanel />
-      <div className={'app-content'}>
-        <SideBar />
-        <PageContent />
+    <Suspense fallback={<>loading</>}>
+      <div
+        className={classNames(
+          'app',
+          { hovered: true, red: false, green: true },
+          [theme]
+        )}
+      >
+        <NavPanel />
+        <div className={'app-content'}>
+          <SideBar />
+          <PageContent />
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 };

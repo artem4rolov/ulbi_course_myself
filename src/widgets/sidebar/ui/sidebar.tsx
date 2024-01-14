@@ -4,9 +4,15 @@ import { ThemeContext } from 'app';
 
 import styles from './sidebar.module.scss';
 import { Button, classNames } from 'shared';
+import { useTranslation } from 'react-i18next';
 
 export const SideBar: FC<SideBarProps> = () => {
   const { toggleTheme } = useContext(ThemeContext);
+  const { t, i18n } = useTranslation('sidebar');
+
+  const changeLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en');
+  };
 
   const [open, setOpen] = useState(false);
 
@@ -17,7 +23,10 @@ export const SideBar: FC<SideBarProps> = () => {
       ])}
     >
       <Button variant="outline-inverted" onClick={toggleTheme}>
-        toggle
+        theme
+      </Button>
+      <Button variant="outline-inverted" onClick={changeLanguage}>
+        {t('translateButton')}
       </Button>
       <Button variant="solid" onClick={() => setOpen((prev) => !prev)}>
         {open ? 'close' : 'open'}

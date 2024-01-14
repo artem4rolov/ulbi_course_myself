@@ -3,7 +3,6 @@ export const classNames = (
   condition: Record<string, boolean>,
   addtitional: string[]
 ): string => {
-  console.log(addtitional);
   return [
     mainClass,
     ...addtitional,
