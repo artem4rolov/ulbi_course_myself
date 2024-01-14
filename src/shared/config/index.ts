@@ -1,2 +1,2 @@
-export * from './router-config';
-export * from './i18n';
+export * from './router-config'
+export * from './i18n'
