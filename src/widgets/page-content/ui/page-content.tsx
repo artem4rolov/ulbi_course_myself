@@ -6,13 +6,13 @@ import { routerConfig } from 'shared'
 import styles from './page-content.module.scss'
 
 export const PageContent: FC<PageContentProps> = () => {
-	return (
-		<div className={styles['page-content']}>
-			<Routes>
-				{Object.values(routerConfig).map((config) => (
-					<Route key={config.id} path={config.path} element={config.element} />
-				))}
-			</Routes>
-		</div>
-	)
+  return (
+    <div className={styles['page-content']}>
+      <Routes>
+        {Object.values(routerConfig).map((config) => (
+          <Route key={config.id} path={config.path} element={config.element} />
+        ))}
+      </Routes>
+    </div>
+  )
 }

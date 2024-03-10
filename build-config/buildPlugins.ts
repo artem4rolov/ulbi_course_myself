@@ -1,6 +1,6 @@
-import { ProgressPlugin, WebpackPluginInstance } from "webpack";
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import { ProgressPlugin, WebpackPluginInstance } from 'webpack'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 export function buildPlugins(pathHtml: string): WebpackPluginInstance[] {
   return [
@@ -9,5 +9,5 @@ export function buildPlugins(pathHtml: string): WebpackPluginInstance[] {
     }),
     new ProgressPlugin(),
     new MiniCssExtractPlugin(),
-  ];
+  ]
 }

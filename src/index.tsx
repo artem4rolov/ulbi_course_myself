@@ -8,11 +8,11 @@ import './shared/config/i18n/i18n'
 const root = createRoot(document.getElementById('root')!)
 
 if (root) {
-	root.render(
-		<ThemeContextProvider>
-			<BrowserRouter>
-				<App />
-			</BrowserRouter>
-		</ThemeContextProvider>
-	)
+  root.render(
+    <ThemeContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ThemeContextProvider>,
+  )
 }

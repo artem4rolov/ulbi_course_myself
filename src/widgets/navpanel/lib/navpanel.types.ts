@@ -1,3 +1,3 @@
 export interface NavPanelProps {
-  className?: string;
+  className?: string
 }

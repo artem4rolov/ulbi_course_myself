@@ -8,16 +8,13 @@
   width: 100vw;
   font: var(--font-m);
   color: var(--primary-text-color);
-
   background: var(--bg-color);
-
   display: flex;
   flex-direction: column;
 
   &-content {
     height: 100%;
     width: 100%;
-
     display: flex;
   }
 }

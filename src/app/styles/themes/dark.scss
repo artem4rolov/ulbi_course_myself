@@ -1,40 +1,35 @@
 .app.dark {
   // fonts
-  --primary-font-color: rgb(78, 105, 113);
-  --primary-inverted-font-color: rgb(43, 43, 43);
-
-  --secondary-font-color: rgb(75, 128, 106);
-  --secondary-inverted-font-color: rgb(48, 85, 70);
+  --primary-font-color: rgb(78 105 113);
+  --primary-inverted-font-color: rgb(43 43 43);
+  --secondary-font-color: rgb(75 128 106);
+  --secondary-inverted-font-color: rgb(48 85 70);
 
   // background
-  --bg-color: rgb(43, 43, 43);
-  --inverted-bg-color: rgb(78, 105, 113);
+  --bg-color: rgb(43 43 43);
+  --inverted-bg-color: rgb(78 105 113);
 
   // link
-  --link-color: rgb(78, 105, 113);
-  --hovered-link-color: rgb(61, 83, 90);
+  --link-color: rgb(78 105 113);
+  --hovered-link-color: rgb(61 83 90);
 
   // link inverted
-  --link-inverted-color: rgb(43, 43, 43);
-  --hovered-inverted-link-color: rgb(70, 70, 70);
+  --link-inverted-color: rgb(43 43 43);
+  --hovered-inverted-link-color: rgb(70 70 70);
 
   // button
-  --button-font-color: rgb(78, 105, 113);
-  --button-hovered-font-color: rgb(61, 82, 88);
-
-  --button-border-color: rgb(78, 105, 113);
-  --button-hovered-border-color: rgb(61, 83, 90);
-
-  --button-background: rgb(43, 43, 43);
-  --button-hovered-background: rgb(68, 68, 68);
+  --button-font-color: rgb(78 105 113);
+  --button-hovered-font-color: rgb(61 82 88);
+  --button-border-color: rgb(78 105 113);
+  --button-hovered-border-color: rgb(61 83 90);
+  --button-background: rgb(43 43 43);
+  --button-hovered-background: rgb(68 68 68);
 
   // button inverted
-  --button-inverted-font-color: rgb(43, 43, 43);
-  --button-inverted-hovered-font-color: rgb(64, 64, 64);
-
-  --button-inverted-border-color: rgb(43, 43, 43);
-  --button-inverted-hovered-border-color: rgb(64, 64, 64);
-
-  --button-inverted-background: rgb(78, 105, 113);
-  --button-inverted-hovered-background: rgb(100, 136, 146);
+  --button-inverted-font-color: rgb(43 43 43);
+  --button-inverted-hovered-font-color: rgb(64 64 64);
+  --button-inverted-border-color: rgb(43 43 43);
+  --button-inverted-hovered-border-color: rgb(64 64 64);
+  --button-inverted-background: rgb(78 105 113);
+  --button-inverted-hovered-background: rgb(100 136 146);
 }

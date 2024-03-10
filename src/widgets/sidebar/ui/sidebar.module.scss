@@ -7,11 +7,9 @@
   flex-direction: column;
   justify-content: start;
   gap: 10px;
-
   padding: 20px 10px;
   height: calc(100vh - var(--navpanel-height));
   width: 80px;
-
   transition: width 0.15s ease-in-out;
 
   &-opened {

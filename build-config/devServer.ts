@@ -1,4 +1,4 @@
-import { Configuration } from "webpack-dev-server";
+import { Configuration } from 'webpack-dev-server'
 
 export function devServer(port: number): Configuration {
   return {
@@ -6,5 +6,5 @@ export function devServer(port: number): Configuration {
     port,
     // watchContentBase: true,
     historyApiFallback: true,
-  };
+  }
 }

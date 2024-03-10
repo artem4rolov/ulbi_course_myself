@@ -1,3 +1,3 @@
 export interface PageContentProps {
-  className?: string;
+  className?: string
 }

@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, createContext } from 'react'
+import { createContext } from 'react'
 
 export enum ThemeMode {
   DARK = 'dark',
@@ -6,13 +6,13 @@ export enum ThemeMode {
 }
 
 interface defaultValueTypes {
-  theme: ThemeMode;
-  toggleTheme: () => void;
+  theme: ThemeMode
+  toggleTheme: () => void
 }
 
 const defaultValue: defaultValueTypes = {
-	theme: ThemeMode.LIGHT,
-	toggleTheme: () => {},
+  theme: ThemeMode.LIGHT,
+  toggleTheme: () => {},
 }
 
 export const ThemeContext = createContext(defaultValue)

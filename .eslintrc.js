@@ -1,54 +1,73 @@
 module.exports = {
-	'env': {
-		'browser': true,
-		'es2021': true
-	},
-	'extends': [
-		'eslint:recommended',
-		'plugin:@typescript-eslint/recommended',
-		'plugin:react/recommended'
-	],
-	'overrides': [
-		{
-			'env': {
-				'node': true
-			},
-			'files': [
-				'.eslintrc.{js,cjs}'
-			],
-			'parserOptions': {
-				'sourceType': 'script'
-			}
-		}
-	],
-	'parser': '@typescript-eslint/parser',
-	'parserOptions': {
-		'ecmaVersion': 'latest',
-		'sourceType': 'module'
-	},
-	'plugins': [
-		'@typescript-eslint',
-		'react'
-	],
-	'rules': {
-		'indent': [
-			'error',
-			'tab'
-		],
-		'linebreak-style': [
-			'error',
-			'windows'
-		],
-		'quotes': [
-			'error',
-			'single'
-		],
-		'semi': [
-			'error',
-			'never'
-		],
-		'react/react-in-jsx-scope': 'off',
-		'@typescript-eslint/no-unused-vars': 'off',
-		'react/no-children-prop': 'off'
-	}
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: [
+    'plugin:react-hooks/recommended',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+  ],
+  overrides: [
+    {
+      files: ['./src/**/*.tsx', './src/**/*.ts'],
+      rules: {
+        '@typescript-eslint/semi': 'off',
+        '@typescript-eslint/restrict-template-expressions': 'off',
+        '@typescript-eslint/restrict-plus-operands': 'off',
+        'import/no-anonymous-default-export': 'off',
+        '@typescript-eslint/require-await': 'off',
+        '@typescript-eslint/no-unused-expressions': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'warn',
+        '@typescript-eslint/no-floating-promises': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/no-unsafe-argument': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
+        '@typescript-eslint/no-unsafe-return': 'off',
+        '@typescript-eslint/ban-ts-comment': 'off',
+        '@typescript-eslint/no-unused-vars': 'warn',
+        'react/no-children-prop': 'off',
+        camelcase: 'off',
+      },
+      extends: [
+        'prettier',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+      ],
+    },
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+    project: './tsconfig.json',
+  },
+  plugins: ['@typescript-eslint', 'react', 'react-hooks'],
+  rules: {
+    'prettier/prettier': [
+      'warn',
+      {
+        endOfLine: 'auto',
+        semi: false,
+        singleQuote: true,
+        bracketSameLine: false,
+        useTabs: false,
+        printWidth: 80,
+        trailingComma: 'all',
+        bracketSpacing: true,
+        arrowParens: 'always',
+        jsxBracketSameLine: false,
+        htmlWhitespaceSensitivity: 'css',
+      },
+    ],
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'off',
+    'react-hooks/exhaustive-deps': 'warn',
+  },
+  ignorePatterns: ['./src/index.tsx'],
 }

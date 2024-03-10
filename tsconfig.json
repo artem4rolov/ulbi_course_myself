@@ -22,4 +22,5 @@
     }
   },
   "include": ["./**/*.ts", "./**/*.tsx"]
+  // "exclude": ["./src/index.tsx"]
 }
