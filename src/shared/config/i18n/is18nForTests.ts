@@ -1,6 +1,7 @@
 import i18next from 'i18next'
 import resourcesToBackend from 'i18next-resources-to-backend'
 
+// для корректной работы тестов react-компонентов
 const newInstance = i18next.createInstance()
 newInstance
   .use(
