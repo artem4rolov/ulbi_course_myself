@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect, useState } from 'react'
+import { FC, useContext, useState } from 'react'
 import { SideBarProps } from '../lib/sidebar.types'
 import { ThemeContext } from 'app'
 
@@ -16,14 +16,9 @@ export const SideBar: FC<SideBarProps> = () => {
 
   const [open, setOpen] = useState(false)
 
-  useEffect(() => {
-    if (open) {
-      console.log('open')
-    }
-  }, [])
-
   return (
     <div
+      data-testid="sidebar"
       className={classNames(styles.sidebar, {}, [
         open && styles['sidebar-opened'],
       ])}

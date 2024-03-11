@@ -21,6 +21,10 @@
       "module": "CommonJS"
     }
   },
-  "include": ["./**/*.ts", "./**/*.tsx"]
-  // "exclude": ["./src/index.tsx"]
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./config/jest/setupTests.ts",
+    "declaration.d.ts"
+  ]
 }
