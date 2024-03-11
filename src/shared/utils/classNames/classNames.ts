@@ -5,9 +5,9 @@ export const classNames = (
 ): string => {
   return [
     mainClass,
-    ...addtitional,
     ...Object.entries(condition)
       .filter(([key, value]) => !!value)
       .map(([key, value]) => key),
+    ...addtitional.filter((additionalClass) => !!additionalClass),
   ].join(' ')
 }

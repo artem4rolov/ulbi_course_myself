@@ -68,6 +68,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
     'react-hooks/exhaustive-deps': 'warn',
+    'prefer-const': 'warn',
   },
   ignorePatterns: ['./src/index.tsx'],
 }
