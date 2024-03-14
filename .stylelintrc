@@ -4,6 +4,9 @@
     "stylelint-config-prettier-scss"
   ],
   "rules": {
-    "declaration-empty-line-before": null
+    "declaration-empty-line-before": null,
+    "no-descending-specificity": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "color-function-notation": null
   }
 }

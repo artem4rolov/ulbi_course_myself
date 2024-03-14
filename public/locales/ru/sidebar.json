@@ -1,3 +1,7 @@
 {
-  "translateButton": "Перевести"
+  "translateButton": "Русский",
+  "shortTranslateButton": "Ру",
+  "ToHomePageLink": "Главная",
+  "ToContactUsPage": "Контакты",
+  "ToAboutUsPage": "О нас"
 }

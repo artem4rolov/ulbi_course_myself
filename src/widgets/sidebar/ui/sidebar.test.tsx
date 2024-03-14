@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react'
+import { fireEvent, screen, waitFor } from '@testing-library/react'
 import { renderWithProviders } from 'app/providers/tests'
 import { SideBar } from './sidebar'
 
@@ -7,11 +7,14 @@ describe('Тест рендера компонента SideBar', () => {
     renderWithProviders(<SideBar />)
     waitFor(() => expect(screen.getByTestId('sidebar')).toBeInTheDocument())
     screen.debug()
-
-    // expect(screen.getByText('title')).toBeInTheDocument()
   })
 
-  //   it('рендер компонента', () => {
-  //     render(<Button children={''} />)
-  //   })
+  it('Тест работы кнопки по открытию сайдбара', () => {
+    renderWithProviders(<SideBar />)
+    const sidebar = screen.getByTestId('sidebar')
+    const collapseBtn = screen.getByTestId('collapseBtn')
+
+    fireEvent.click(collapseBtn)
+    expect(sidebar).toHaveClass('opened')
+  })
 })

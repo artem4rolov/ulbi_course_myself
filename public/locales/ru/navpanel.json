@@ -1,5 +1,3 @@
 {
-  "ToHomePageLink": "Главная",
-  "ToContactUsPage": "Контакты",
-  "ToAboutUsPage": "О нас"
+  "loginButton": "Войти"
 }

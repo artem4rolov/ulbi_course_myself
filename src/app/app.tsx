@@ -7,15 +7,13 @@ import { NavPanel, PageContent, SideBar } from 'widgets'
 import './styles/index.scss'
 
 export const App = () => {
-  const { theme } = useContext(ThemeContext)
-
   return (
     <Suspense fallback={<>loading</>}>
       <div
         className={classNames(
           'app',
           { hovered: true, red: false, green: true },
-          [theme],
+          [],
         )}
       >
         <NavPanel />

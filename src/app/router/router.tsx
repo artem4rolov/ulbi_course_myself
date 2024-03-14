@@ -7,7 +7,7 @@ export const Router = () => {
 
   return (
     <>
-      <Link
+      {/* <Link
         to="/"
         children={
           <Button variant="ghost-inverted">{t('ToHomePageLink')}</Button>
@@ -24,7 +24,7 @@ export const Router = () => {
         children={
           <Button variant="ghost-inverted">{t('ToAboutUsPage')}</Button>
         }
-      />
+      /> */}
     </>
   )
 }

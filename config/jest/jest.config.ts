@@ -21,8 +21,9 @@ const config: Config = {
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
     // '\\.module.scss$': '<rootDir>/config/jest/mocks/styleMock.js',
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/config/jest/mocks/jestMock.js',
+    // '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+    //   '<rootDir>/config/jest/mocks/jestMock.js',
+    '\\.svg$': '<rootDir>config/jest/mocks/svgTransform.tsx',
   },
   transform: {
     '^.+\\.(ts|tsx|js)$': 'babel-jest',

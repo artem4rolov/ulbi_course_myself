@@ -1,5 +1,3 @@
 {
-  "ToHomePageLink": "Home",
-  "ToContactUsPage": "Contact us",
-  "ToAboutUsPage": "About us"
+  "loginButton": "Login"
 }

@@ -1,1 +1,1 @@
-export * from './classNames/classNames'
+export * from './class-names/class-names'

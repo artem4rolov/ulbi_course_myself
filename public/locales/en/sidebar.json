@@ -1,3 +1,7 @@
 {
-  "translateButton": "Translate"
+  "translateButton": "English",
+  "shortTranslateButton": "En",
+  "ToHomePageLink": "Home",
+  "ToContactUsPage": "Contact us",
+  "ToAboutUsPage": "About us"
 }

@@ -1,0 +1,93 @@
+.modal {
+  &-overflow {
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 45%);
+
+    transition: background 0.1s ease-in-out;
+  }
+
+  &-content {
+    width: 500px;
+    height: 200px;
+    padding: 10px;
+
+    background: var(--inverted-bg-color);
+    border-radius: 6px;
+
+    animation-duration: 0.18s;
+    animation-timing-function: ease-in-out;
+    animation-name: open;
+
+    @keyframes open {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      50% {
+        transform: scale(0.8);
+        opacity: 0.7;
+      }
+
+      80% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+
+      90% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    &-closing {
+      animation-duration: 0.2s;
+      animation-timing-function: ease-in-out;
+      animation-name: close;
+
+      @keyframes close {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+
+        10% {
+          transform: scale(1.1);
+        }
+
+        30% {
+          transform: scale(1.2);
+        }
+
+        40% {
+          transform: scale(1);
+        }
+
+        60% {
+          transform: scale(0.5);
+          opacity: 0.5;
+        }
+
+        100% {
+          transform: scale(0);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

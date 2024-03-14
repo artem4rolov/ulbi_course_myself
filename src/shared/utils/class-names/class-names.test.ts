@@ -1,4 +1,4 @@
-import { classNames } from './classNames'
+import { classNames } from './class-names'
 
 test('Тест работы функции classNames', () => {
   expect(classNames('main', {}, [])).toBe('main')
