@@ -1,11 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .svgLoader {
+        animation: spin 0.5s linear infinite;
+        margin: auto;
+      }
+      .divLoader {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="divLoader">
+        <svg class="svgLoader" viewBox="0 0 100 100" width="10em" height="10em">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <radialGradient
+              id="a7"
+              cx=".66"
+              fx=".66"
+              cy=".3125"
+              fy=".3125"
+              gradientTransform="scale(1.5)"
+            >
+              <stop offset="0" stop-color="#000000"></stop>
+              <stop offset=".3" stop-color="#000000" stop-opacity=".9"></stop>
+              <stop offset=".6" stop-color="#000000" stop-opacity=".6"></stop>
+              <stop offset=".8" stop-color="#000000" stop-opacity=".3"></stop>
+              <stop offset="1" stop-color="#000000" stop-opacity="0"></stop>
+            </radialGradient>
+            <circle
+              transform-origin="center"
+              fill="none"
+              stroke="url(#a7)"
+              stroke-width="9"
+              stroke-linecap="round"
+              stroke-dasharray="200 1000"
+              stroke-dashoffset="0"
+              cx="100"
+              cy="100"
+              r="70"
+            >
+              <animateTransform
+                type="rotate"
+                attributeName="transform"
+                calcMode="spline"
+                dur="2"
+                values="360;0"
+                keyTimes="0;1"
+                keySplines="0 0 1 1"
+                repeatCount="indefinite"
+              ></animateTransform>
+            </circle>
+            <circle
+              transform-origin="center"
+              fill="none"
+              opacity=".2"
+              stroke="#000000"
+              stroke-width="9"
+              stroke-linecap="round"
+              cx="100"
+              cy="100"
+              r="70"
+            ></circle>
+          </svg>
+        </svg>
+      </div>
+    </div>
   </body>
 </html>

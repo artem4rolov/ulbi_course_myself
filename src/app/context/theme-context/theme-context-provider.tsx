@@ -3,12 +3,14 @@ import { ThemeContext, ThemeMode } from './theme-context'
 
 interface ThemeContextProviderProps {
   children: React.ReactNode
+  defaultTheme?: ThemeMode
 }
 
 export const ThemeContextProvider: FC<ThemeContextProviderProps> = ({
   children,
+  defaultTheme = ThemeMode.LIGHT,
 }) => {
-  const [theme, setTheme] = useState(ThemeMode.LIGHT)
+  const [theme, setTheme] = useState(defaultTheme)
 
   const toggleTheme = () => {
     theme === ThemeMode.LIGHT

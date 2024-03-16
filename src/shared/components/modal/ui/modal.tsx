@@ -1,4 +1,4 @@
-import { FC, MouseEvent, MouseEventHandler, useState } from 'react'
+import { FC, useState } from 'react'
 import { ModalProps } from '../lib/modal.types'
 import { createPortal } from 'react-dom'
 

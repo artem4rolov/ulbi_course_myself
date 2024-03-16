@@ -1,0 +1,18 @@
+.loader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  background: var(--bg-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 100px;
+    height: 100px;
+    fill: var(--inverted-bg-color);
+    stroke: var(--inverted-bg-color);
+  }
+}
