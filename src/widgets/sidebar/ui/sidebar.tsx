@@ -18,7 +18,6 @@ import { ThemeContext } from 'app'
 import { Button, LinkWrapper, classNames } from 'shared'
 
 import styles from './sidebar.module.scss'
-import { Link } from 'react-router-dom'
 
 export const SideBar: FC<SideBarProps> = ({ className }) => {
   const { toggleTheme } = useContext(ThemeContext)

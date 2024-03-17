@@ -1,12 +1,7 @@
 import { FC } from 'react'
 import { Provider } from 'react-redux'
 import { createStore } from '../lib/store'
-import { StateSchema } from '../lib/store.types'
-
-// почему-то изначально нет такого типа в этой версии typescript
-type DeepPartial<T> = {
-  [K in keyof T]?: T[K] extends object ? DeepPartial<T[K]> : T[K]
-}
+import { DeepPartial, StateSchema } from '../lib/store.types'
 
 interface StoreProviderProps {
   children?: React.ReactNode

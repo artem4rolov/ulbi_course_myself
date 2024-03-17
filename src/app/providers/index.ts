@@ -4,4 +4,4 @@ export {
   ThemeDecorator,
   StyleDecorator,
 } from './storybook'
-export { StoreProvider } from './store-provider'
+export { StoreProvider, DeepPartial } from './store-provider'
