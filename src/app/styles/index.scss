@@ -7,13 +7,13 @@ body {
   font: var(--font-m);
   color: var(--primary-text-color);
   background: var(--bg-color);
+
+  overflow: hidden;
 }
 
 .app {
   height: 100vh;
   width: 100vw;
-
-  overflow: auto;
 
   font: var(--font-m);
   color: var(--primary-text-color);

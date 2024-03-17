@@ -22,7 +22,7 @@ export function buildConfig(options: BuildOptions): Configuration {
     },
     devtool: isDev ? 'inline-source-map' : undefined,
     resolve: buildResolves(options),
-    plugins: buildPlugins(path.html),
+    plugins: buildPlugins(path.html, options.isDev),
     devServer: isDev ? devServer(port) : undefined,
     performance: {
       hints: false,

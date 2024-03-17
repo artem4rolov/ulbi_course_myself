@@ -1,4 +1,4 @@
-import { ThemeMode } from 'app/context/theme-context/theme-context'
+import { ThemeMode } from 'app/context/theme-context/theme-context.types'
 import { FC } from 'react'
 
 import '../../../styles/index.scss'

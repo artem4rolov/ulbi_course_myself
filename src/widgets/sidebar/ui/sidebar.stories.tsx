@@ -1,8 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { ThemeMode } from 'app/context/theme-context/theme-context'
-import { ThemeDecorator } from 'app/providers/storybook/theme-decorator/theme-decorator'
-import { RouterWithTranslatorDecorator } from 'app/providers/storybook'
+import {
+  RouterWithTranslatorDecorator,
+  ThemeDecorator,
+} from 'app/providers/storybook'
 import { SideBar } from './sidebar'
+import { ThemeMode } from 'app'
 
 RouterWithTranslatorDecorator
 

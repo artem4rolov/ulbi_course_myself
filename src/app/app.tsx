@@ -1,11 +1,10 @@
-import { useContext, Suspense, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 import { classNames } from 'shared'
-import { ThemeContext } from './context'
+import { Loader } from 'shared/components/loader'
 import { NavPanel, PageContent, SideBar } from 'widgets'
 
 import './styles/index.scss'
-import { Loader } from 'shared/components/loader'
 
 export const App = () => {
   const [isDomLoading, setIsDomLoading] = useState(true)

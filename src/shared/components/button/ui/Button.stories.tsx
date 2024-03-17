@@ -1,11 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
+import { ButtonVariant } from '../lib/button.types'
 import { Button } from './button'
 import { Logo } from 'shared/assets'
-import { ButtonVariant } from '../lib/button.types'
-import { ThemeMode } from 'app/context/theme-context/theme-context'
-import { ThemeDecorator } from 'app/providers/storybook/theme-decorator/theme-decorator'
+import { ThemeDecorator, ThemeMode } from 'app'
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: 'Shared/Button',
   component: Button,

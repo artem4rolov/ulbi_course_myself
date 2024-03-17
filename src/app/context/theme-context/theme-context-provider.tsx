@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react'
-import { ThemeContext, ThemeMode } from './theme-context'
+import { ThemeContext, ThemeMode } from './theme-context.types'
 
 interface ThemeContextProviderProps {
   children: React.ReactNode

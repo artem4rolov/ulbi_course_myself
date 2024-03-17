@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { ThemeMode } from 'app/context/theme-context/theme-context'
-import { ThemeDecorator } from 'app/providers/storybook/theme-decorator/theme-decorator'
 import { NavPanel } from './navpanel'
-import { RouterWithTranslatorDecorator } from 'app/providers/storybook'
+import { RouterWithTranslatorDecorator, ThemeDecorator, ThemeMode } from 'app'
 
 RouterWithTranslatorDecorator
 

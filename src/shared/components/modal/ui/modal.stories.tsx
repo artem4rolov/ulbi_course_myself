@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { ThemeMode } from 'app/context/theme-context/theme-context'
+import { ThemeMode } from 'app/context/theme-context/theme-context.types'
 import { ThemeDecorator } from 'app/providers/storybook/theme-decorator/theme-decorator'
 import { Modal } from './modal'
 
