@@ -1,2 +1,3 @@
-export { StoreProvider } from './ui/store-provider'
-export { DeepPartial, StateSchema } from './lib/store.types'
+export { StoreProvider } from './ui'
+export { StateSchema } from './lib/store.types'
+export type { DeepPartial } from './lib/store.types'

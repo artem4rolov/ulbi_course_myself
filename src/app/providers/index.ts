@@ -4,4 +4,4 @@ export {
   ThemeDecorator,
   StyleDecorator,
 } from './storybook'
-export { StoreProvider, DeepPartial } from './store-provider'
+export { ErrorBoundary } from './error-boundary'
